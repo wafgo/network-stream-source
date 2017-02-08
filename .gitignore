@@ -1,0 +1,8 @@
+.Debug
+.project
+.cproject
+*.o
+*.elf
+*.map
+*.d
+
