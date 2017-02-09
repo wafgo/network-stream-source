@@ -71,7 +71,7 @@ int register_video_streaming_source(struct video_streaming_device* device)
 	if (!device || !device->ops || !(device->ops->start_streaming && device->ops->stop_streaming))
 		return -EINVALID;
 
-	video_devices = calloc(++num_of_video_devices, sizeof(*device));
+	video_devices = (struct video_streaming_device**) calloc(++num_of_video_devices, sizeof(*device));
 
 	if (!video_devices)
 		return -ENOMEM;

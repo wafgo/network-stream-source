@@ -78,7 +78,7 @@ static int write_response(struct video_streaming_device* sdev, int socket, uint3
 	}
 		break;
 	case SVR_CMD_GET_FRAME: {
-		char* buff = sdev->ops->get_one_frame(sdev);
+		char* buff = (char *)sdev->ops->get_one_frame(sdev);
 		send_response(socket, len, buff);
 	}
 		break;

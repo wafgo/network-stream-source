@@ -47,7 +47,7 @@ struct v4l_video_device
 
 static struct video_streaming_ops v4l_ops = { .get_frame_width = v4l_dev_get_frame_width, .get_frame_height =
 		v4l_dev_get_frame_height, .get_frame_bpp = v4l_dev_get_frame_bpp, .get_one_frame = v4l_dev_get_one_frame,
-		.start_streaming = v4l_dev_start, .stop_streaming = v4l_dev_stop, };
+		.start_streaming = v4l_dev_start, .stop_streaming = v4l_dev_stop };
 
 static int v4l_dev_stop(struct video_streaming_device* sdev)
 {
