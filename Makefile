@@ -22,6 +22,6 @@ clean:
 
 .PRECIOUS: %.d
 
-.PHONY: $(target) clean
+.PHONY: clean
 
 -include $(obj:.o=.d)
